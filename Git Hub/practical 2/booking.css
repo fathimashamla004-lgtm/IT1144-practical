@@ -1,0 +1,86 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Image */
+body{
+    background:url("Hotel.jpeg") no-repeat center center/cover;
+    height:100vh;
+}
+
+/* Top Navigation */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+/* Left Nav */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:gold;
+}
+
+/* Logo Right Side */
+.logo img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+}
+
+/* Center Content */
+.center{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+/* Heading */
+.center h1{
+    font-size:70px;
+    font-weight:bold;
+}
+
+/* Caption */
+.center p{
+    font-size:22px;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+/* Button */
+.btn{
+    padding:15px 40px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
