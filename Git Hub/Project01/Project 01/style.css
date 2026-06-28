@@ -1,0 +1,337 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fdfbf7; /* Soft Cream background */
+    color: #2b2d42; /* Dark Charcoal text */
+    overflow-x: hidden;
+    padding-top: 80px; /* Leaves room for fixed navbar */
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(253, 251, 247, 0.98);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2b2d42;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.navbar .logo b {
+	color: #e0a96d; 
+	}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+	color: #e0a96d; 
+	}
+
+/* Buttons */
+.btn {
+    padding: 12px 28px;
+    background: #e0a96d; 
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+    background: #cc965c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(224, 169, 109, 0.4);
+}
+
+/* Hero Banners for Inner Pages */
+.page-banner {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.page-banner h1 { 
+font-size: 3.5rem; 
+margin-bottom: 10px; 
+font-weight: 400;
+ }
+ 
+.page-banner p { 
+font-family: sans-serif;
+ font-size: 1.1rem; 
+ max-width: 600px; 
+ font-weight: 300; 
+ }
+
+/* Home Hero with Video Background */
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: -80px;
+}
+.hero-video {
+    position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	object-fit: cover;
+	z-index: -1; 
+	filter: brightness(45%);
+}
+
+.hero-content h1 { 
+font-size: 4rem; 
+margin-bottom: 15px; 
+}
+
+.hero-content p { 
+font-size: 1.2rem;
+ max-width: 650px; 
+ margin: 0 auto 25px; 
+ font-family: sans-serif; 
+ font-weight: 300; 
+ }
+
+/* Layout Sections */
+.content-section { 
+padding: 80px 10%;
+ text-align: center;
+ }
+ 
+.content-section h2 {
+font-size: 2.8rem; 
+margin-bottom: 15px; 
+font-weight: 400; 
+}
+
+
+.section-subtitle {
+	color: #777;
+	font-style: italic; 
+	margin-bottom: 50px; 
+	font-size: 1.1rem;
+	}
+
+/* Grid Systems */
+.grid-3 { 
+display: grid; 
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 40px; 
+ }
+ 
+.grid-2 { display: grid; 
+grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+gap: 50px; 
+align-items: center; 
+text-align: left; 
+}
+
+/* New Highlights Section Styling */
+.highlights-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 10%;
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+    margin-top: -50px; /* இது Hero வீடியோவின் மேல் அழகாக மிதப்பது போல் காட்டும் */
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.highlight-box {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.highlight-box span {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.highlight-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+    color: #2b2d42;
+}
+
+.highlight-box p {
+    font-size: 0.9rem;
+    color: #777;
+    font-family: sans-serif;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .highlights-section {
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 20px;
+    }
+}
+/* Cards Styling */
+.card {
+    background: white; 
+	border-radius: 4px;
+	overflow: hidden; 
+	box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+	transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover { 
+transform: translateY(-8px);
+ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+ }
+ 
+.card img { 
+width: 100%;
+ height: 300px;
+ object-fit: cover;
+ transition: transform 0.6s;
+ }
+ 
+.card:hover img { 
+transform: scale(1.05); 
+}
+
+.card-info { padding: 25px; 
+text-align: center;
+ }
+ 
+.card-info h3 { 
+margin-bottom: 10px; 
+font-size: 1.5rem; 
+font-weight: 400; 
+}
+
+.card-info p { 
+color: #666; 
+font-size: 0.95rem; 
+line-height: 1.6;
+ font-family: sans-serif; }
+
+/* About Page Specific Layout */
+.about-img { 
+width: 100%; 
+border-radius: 4px;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+ }
+ 
+.about-text p { 
+font-family: sans-serif; 
+font-size: 1.05rem;
+ line-height: 1.8;
+color: #444; 
+margin-bottom: 20px;
+ }
+
+/* Contact Form Styling */
+.contact-form { 
+background: white; 
+padding: 40px; 
+border-radius: 8px;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+ }
+ 
+.form-group { 
+margin-bottom: 20px; 
+}
+
+.form-group label { 
+display: block; 
+text-align: left;
+ margin-bottom: 8px; 
+font-family: sans-serif; 
+font-weight: 500; 
+font-size: 0.95rem; 
+}
+
+.form-group input,.form-group textarea {
+    width: 100%;
+	padding: 12px; 
+	border:1px solid #ddd;
+	border-radius: 4px;
+	font-family: sans-serif; 
+	font-size: 1rem; 
+	outline: none; 
+	transition: border 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+	border-color: #e0a96d;
+}
+
+/* Footer */
+footer { background: #1a1a1a; 
+color: #a5a5a5; 
+padding: 30px; 
+text-align: center;
+ font-size: 0.9rem; 
+font-family: sans-serif;
+ margin-top: 80px; 
+ }
+
+/* Animations */
+.animate-text { 
+animation: slideDown 1s ease-out forwards; 
+}
+@keyframes slideDown { from { opacity: 0; 
+transform: translateY(-30px); 
+}
+ to { opacity: 1; 
+transform: translateY(0);
+ } }
